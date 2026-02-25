@@ -1,14 +1,25 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
-from app.crew.crew_setup import run_crew
+from app.crew.crew_runner import run_coin_crew, run_portfolio_crew
 
 router = APIRouter()
 
-class Query(BaseModel):
-    coin: str = "bitcoin"
+
+class CoinQuery(BaseModel):
+    coin: str
+
+
+class PortfolioQuery(BaseModel):
+    coins: list[str]
+
 
 @router.post("/advise")
-def advise(q: Query):
-    result = run_crew(q.coin)
-    print(type(result))
-    return {"advice": result.raw}
+def advise(q: CoinQuery):
+    result = run_coin_crew(q.coin)
+    return {"result": result.raw}
+
+
+@router.post("/portfolio/advice")
+def portfolio_advice(q: PortfolioQuery):
+    result = run_portfolio_crew(q.coins)
+    return {"result": result.raw}

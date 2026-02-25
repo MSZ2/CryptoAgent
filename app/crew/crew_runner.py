@@ -1,6 +1,6 @@
 from crewai import Crew
-from app.crew.agents import market_agent, news_agent, advisor_agent
-from app.crew.tasks import market_task, news_task, advisor_task
+from app.crew.agents import market_agent, news_agent, advisor_agent, manager_agent
+from app.crew.tasks import market_task, news_task, advisor_task, portfolio_manager_task
 
 def run_crew(coin="bitcoin"):
     tasks = [

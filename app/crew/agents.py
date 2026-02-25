@@ -30,3 +30,16 @@ advisor_agent = Agent(
     llm=gemini_llm,
     verbose=True
 )
+
+manager_agent = Agent(
+    role="Portfolio Manager",
+    backstory=(
+        "You manage a team of crypto analysts. "
+        "For each coin, you gather market trends, news sentiment, and investment advice, "
+        "then produce an overall portfolio strategy."
+    ),
+    goal="Analyze a crypto portfolio by coordinating specialized analysts and produce a final portfolio recommendation",
+    llm=gemini_llm,
+    allow_delegation=True,
+    verbose=True
+)
