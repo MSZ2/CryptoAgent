@@ -62,14 +62,6 @@ suggestions - Overall strategy
 
 ------------------------------------------------------------------------
 
-## Environment Variables
-
-GOOGLE_API_KEY -- Gemini access\
-SERPER_API_KEY -- News search\
-GROQ_API_KEY -- Optional alternative provider
-
-------------------------------------------------------------------------
-
 ## Tech Stack
 
 -   Python 3.12
