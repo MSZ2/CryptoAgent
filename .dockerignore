@@ -1,0 +1,15 @@
+# ...new file...
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+venv
+build
+dist
+.git
+.gitignore
+Dockerfile
+docker-compose*.yml
+*.sqlite3
