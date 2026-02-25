@@ -21,13 +21,6 @@ recommendations using a multi-agent architecture built with CrewAI.
 
 ------------------------------------------------------------------------
 
-## Project Structure
-
-CryptoAgent/ ├── app/ ├── frontend/ ├── requirements.txt ├── Dockerfile
-├── README.md └── uv.lock
-
-------------------------------------------------------------------------
-
 ## Run with Docker
 
 Build image:
