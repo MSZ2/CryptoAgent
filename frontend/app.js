@@ -14,7 +14,7 @@ async function getAdvice() {
         });
 
         const data = await res.json();
-        resultBox.textContent = data.raw || JSON.stringify(data, null, 2);
+        resultBox.textContent = data.raw || JSON.stringify(data.result, null, 2);
     } catch (err) {
         resultBox.textContent = "Error: " + err.message;
     }
@@ -36,7 +36,7 @@ async function getPortfolio() {
         });
 
         const data = await res.json();
-        resultBox.textContent = data.raw || JSON.stringify(data, null, 2);
+        resultBox.textContent = data.raw || JSON.stringify(data.result, null, 2);
     } catch (err) {
         resultBox.textContent = "Error: " + err.message;
     }

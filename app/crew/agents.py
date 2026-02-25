@@ -41,5 +41,6 @@ manager_agent = Agent(
     goal="Analyze a crypto portfolio by coordinating specialized analysts and produce a final portfolio recommendation",
     llm=gemini_llm,
     allow_delegation=True,
+    delegation_targets= [market_agent, news_agent, advisor_agent], 
     verbose=True
 )

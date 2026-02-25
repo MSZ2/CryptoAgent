@@ -58,27 +58,24 @@ def advisor_task(agent):
         agent=agent
         
     )
-def portfolio_manager_task(agent):
+def portfolio_manager_task():
+
+    
     return Task(
         description="""
-        Portfolio:
-        {portfolio}
+        You receive a portfolio: {portfolio}.
 
         For each coin in the portfolio:
+        - Ask the Market Analyst to analyze price trends 
+        - Ask the News Analyst to analyze recent news 
+        - Ask the Trading Advisor for Buy/Hold/Sell 
 
-        1. Ask the Market Analyst to analyze price trends
-        2. Ask the News Analyst to analyze recent news
-        3. Ask the Investment Advisor for Buy/Hold/Sell
-
-        Then aggregate everything and provide:
-
+        Aggregate all results into a structured final report:
         - Per-coin recommendation
-        - Portfolio risk level (Low/Medium/High)
+        - Portfolio risk level
         - Overall strategy
         - Suggested allocation adjustments
-
-        Return a structured final report.
         """,
-        agent=agent,
-        expected_output="Portfolio level investment strategy with per-coin recommendations and risk assessment"
+        expected_output="Portfolio level investment strategy with per-coin recommendations and risk assessment",
+
     )

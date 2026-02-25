@@ -44,7 +44,7 @@ def create_crew(mode: str = "single"):
     elif mode == "portfolio":
         # Add manager task
         tasks =[
-            portfolio_manager_task(manager_agent)
+            portfolio_manager_task()
         ]
 
         return Crew(
