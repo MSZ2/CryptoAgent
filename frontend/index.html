@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crypto Advisor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crypto Trading Advisor</h1>
+
+        <div class="card">
+            <h2>Single Coin Advice</h2>
+            <input id="coinInput" placeholder="e.g. bitcoin" />
+            <button onclick="getAdvice()">Get Advice</button>
+        </div>
+
+        <div class="card">
+            <h2>Portfolio Advice</h2>
+            <input id="portfolioInput" placeholder="e.g. bitcoin,ethereum,solana" />
+            <button onclick="getPortfolio()">Analyze Portfolio</button>
+        </div>
+
+        <div class="card">
+            <h2>Result</h2>
+            <pre id="result"></pre>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

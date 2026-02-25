@@ -43,12 +43,12 @@ def create_crew(mode: str = "single"):
 
     elif mode == "portfolio":
         # Add manager task
-        tasks = base_tasks + [
+        tasks =[
             portfolio_manager_task(manager_agent)
         ]
 
         return Crew(
-            agents=base_agents + [manager_agent],
+            agents=base_agents,
             tasks=tasks,
             manager_agent=manager_agent,
             process=Process.hierarchical,

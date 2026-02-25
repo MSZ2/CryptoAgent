@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
-from app.crew.crew_runner import run_coin_crew, run_portfolio_crew
+from app.crew.crew_runner import run_crew, run_portfolio_crew
 
 router = APIRouter()
 
@@ -15,7 +15,7 @@ class PortfolioQuery(BaseModel):
 
 @router.post("/advise")
 def advise(q: CoinQuery):
-    result = run_coin_crew(q.coin)
+    result = run_crew(q.coin)
     return {"result": result.raw}
 
 
